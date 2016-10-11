@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="shortcut icon" href="img/favicon.ico">
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Lato">
+  <title>Owen Schebella</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+  <!-- header -->
+  <header id="site_header">
+
+    <!-- logo -->
+    <a id="logo" href="/">
+      <img src="img/avatar.jpg" alt="logo">
+      Owen Schebella
+    </a>
+
+    <!-- main navigation -->
+
+    <nav id="main-navigation">
+      <ul>
+        <li><a href="/contact">Get in touch!</a></li>
+      </ul>
+    </nav>
+
+  </header>
+
+  <!-- main -->
+<main id="site-main">
+
+    <!-- hero section -->
+    <%- contentFor("hero") %>
+    <div class="hero">
+      <div class="hero-content">
+        <h1 class="hero-title">Hi there!</h1>
+        <p>I haven't had the oppurtunity to work as a web developer yet.. <br> <br>So rather than
+          share a bunch of irrelevant information from my previous career as a rehabilitation consultant, or mention the fact
+          I have a psychology degree; how about instead
+          I show you some of the things I've been learning and working on (on my own) in the past 12+ months with any spare moment I've had.<br><br>
+          I am excited and ready to begin the next stage of learning within a team environment. One where I bring no opinion or ego, only
+          my perseverance and passion to grow as a developer. <br><br>
+          Thankyou.
+        </p>
+      </div>
+    </div>
+
+    <!-- learnings -->
+<%- contentFor('learnings-headings') %>
+     <div class="site-section">
+      <div class="section-header">
+        <h2>What I've learned so far</h2>
+      </div>
+      <div class="learning-headings">
+        <h5>Tutorials and Workshops</h5>
+          <ul>
+            <% for (course of courses) { %>
+              <li><a href="<%= course.link %>"><%= course.title %></a></li>
+            <% } %>
+          </ul>
+
+        <h5>Books</h5>
+        <ul>
+          <li><a href="https://learnrubythehardway.org/">Learn Ruby the Hard Way</a></li>
+          <li><a href="http://www.goodreads.com/book/show/16301040-rails-4-in-action">Rails 4 in Action Book. </a> <a class="ryan-bigg" href="https://twitter.com/ryanbigg">By Ryan Bigg</a></li>
+          <li><a href="https://www.justinweiss.com/practicing-rails/">Practicing Rails</a></li>
+          <li><a href="http://learn-rails.com/">Learn Ruby on Rails</a></li>
+          <li><a href="http://www.poodr.com/">Practical Object Oriented Design In Ruby</a></li>
+          <li><a href="http://shop.oreilly.com/product/0636920039303.do">You Don't Know JS: Up and Going</a></li>
+          <li><a href="http://shop.oreilly.com/product/0636920026327.do">You Don't Know JS: Scope and Closures</a></li>
+        </ul>
+        <h5>Repos and Projects</h5>
+        <ul>
+          <li><a href="http://secret-citadel-9792.herokuapp.com">Movie Review Practice App: Ruby on Rails</a></li>
+          <li><a href="https://desolate-shore-83702.herokuapp.com">Knowledge Trader (Personal Project): Ruby on Rails</a></li>
+          <li><a href="https://github.com/oschebell/toy_robot_oo">Toy Robot Test. Built with Ruby, using Test Driven Development (RSpec)</a></li>
+        </ul>
+      </div>
+      </div>
+
+
+    <!-- skills -->
+
+
+      <div class="find-header">
+        <h2>WHERE YOU CAN FIND ME</h2>
+        <ul>
+          <li><a href="https://www.twitter.com/oschebella">Twitter: @oschebella</a></li><br>
+          <li><a href="mailto:oschebell@gmail.com">Email: oschebell@gmail.com</a></li><br>
+          <li><a href="tel:0439401344">Phone: 0439401344</a></li><br>
+          <li><a href="https://www.github.com/oschebell">Github/ oschebell</a></li>
+        </ul>
+      </div>
+
+      </div>
+
+
+
+
+    <!-- footer section -->
+
+
+
+</body>
+</html>
